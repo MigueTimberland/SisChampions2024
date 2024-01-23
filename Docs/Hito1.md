@@ -74,7 +74,6 @@ Para el desarrollo del proyecto lo dividiremos en tres partes el frondend, backe
 Para para esta parte del documento vamos a describir cada uno de los hitos el proyecto:
 
 - [Hito 1: Definir el proyecto](https://github.com/MigueTimberland/SisChampions2024/milestone/1)
-(https://github.com/MigueTimberland/inventory/issues/1)
 
 - [Hito 2: Migrar la data de los activos fijos a MySql](https://github.com/MigueTimberland/SisChampions2024/milestone/2)
 

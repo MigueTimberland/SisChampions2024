@@ -24,9 +24,9 @@ Para realizar el test siguiremos los siguientes pasos:
   
      ![PHPUnit Test](https://github.com/MigueTimberland/inventory/blob/master/Docs/class.png)
 
-  - **Cuarto:** Al dar click en toda la clase en este caso escogimos la clase Payment.php
+  - **Cuarto:** Al dar click en toda la clase en este caso escogimos la clase TestCase.php
   
-     ![PHPUnit Test](https://github.com/MigueTimberland/inventory/blob/master/Docs/product.png)
+     ![PHPUnit Test](https://github.com/MigueTimberland/inventory/blob/master/Docs/testcase.png)
 
 ### Pruebas de Test
 
