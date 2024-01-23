@@ -2,81 +2,59 @@
 
 ## Elección de un contenedor base
 
-Se usara Laragon para implementar el servicio de PHP, Apache y MySql. En esta fase del proyecto, se ha seleccionado un contenedor base para la aplicación en PHP y PgAdmin.
+Para esta parte del proyecto se eligió un contenedor base para el proyecto en PHP y PhpAdmin.
 
-Se empleará una imagen de PHP que ofrece un entorno de ejecución PHP estandarizado y reproducible. Esto resulta fundamental para garantizar que la aplicación funcione de manera consistente en diversos entornos, ya sea durante el desarrollo, las pruebas o la producción. Además, se podrá aprovechar la integración con otros servicios de Docker, como bases de datos, servidores web y sistemas de orquestación de contenedores.
+Se empleará una imagen de PHP que ofrece un entorno de ejecución PHP estandarizado y reproducible. Esta medida es esencial para garantizar que tu aplicación funcione de manera consistente en diversos entornos, ya sea durante el desarrollo, las pruebas o en la fase de producción. Además, puedes hacer uso de la integración con otros servicios de Docker, como bases de datos, servidores web y sistemas de orquestación de contenedores.
 
-Se usara la imagen oficial de PHP 7.4.33 para establecer un entorno de ejecución estándar y reproducible. En términos generales, esta imagen de PHP 7.4.33 ya incluye configuraciones predeterminadas con las opciones más comunes y recomendadas para un entorno de ejecución PHP.
-
-Se procederá con la instalación de estas imágenes para poner en marcha los componentes mencionados.
+En cuanto a la imagen oficial de MySQL, nos proveerá un entorno de base de datos estandarizado y reproducible. Usualmente, la imagen de MySQL ya viene preconfigurada con las opciones más comunes y recomendadas para un entorno de base de datos MySQL.
 
 Realizar la instalación de dichas imagenes
 
-   ![Hito3_1](https://github.com/MigueTimberland/inventory/blob/master/Docs/dockerimagen.png)
+   ![Hito3_1](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_php.png)
 
-   ![Hito3_2](https://github.com/MigueTimberland/inventory/blob/master/Docs/imagenphp.png)
+   ![Hito3_2](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_mysql.png)
 
  Aqui instalamos composer
 
-   ![Hito3_3](https://github.com/MigueTimberland/inventory/blob/master/Docs/run_composer.png)  
+   ![Hito3_3](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_images.png)  
 
 Aqui comprobaremos que las imagenes se encuentran dentro del contenedor
 
-   ![Hito3_4](https://github.com/MigueTimberland/inventory/blob/master/Docs/imagestotal.png)
+   ![Hito3_4](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_escritorio.png)
 
 ## Configuración del contenedor
 
 ### Archivo Dockerfile
 
-Creamos el archivo Dockerfile para realizar la configuración de PHP
+Creamos el archivo Dockerfile para realizar la configuración de PHP 8.1.10
 
  - Construiremos nuestro contenedor base a partir de la imagen oficial de php:7.4.33.
  
- ![Hito3_6](https://github.com/MigueTimberland/inventory/blob/master/Docs/d1.png)
+ ![Hito3_6](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/c1.png)
+
+ - Definimos el usuario root debido a que necesitaremos permisos de administrador para instalar composer.
+ 
+ ![Hito3_7](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/c2.png)
 
  - Establecemos el directorio dentro del contenedor en /var/www/html.
+
+ ![Hito3_8](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/c3.png)
+
+ - Copiamos los archivos de configuración de apacher de la carpeta base en las carpetas del contenedor
  
- ![Hito3_7](https://github.com/MigueTimberland/inventory/blob/master/Docs/d2.png)
+ ![Hito3_9](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/c4.png)
 
- - Instala PHPUnit
+ - Construiremos contenedor a partir de la imagen postgres
 
- ![Hito3_8](https://github.com/MigueTimberland/inventory/blob/master/Docs/d3.png)
+ ![Hito3_10](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/c5.png)
 
- - Instalar Git.
+ - Definición de variables de entorno:
  
- ![Hito3_9](https://github.com/MigueTimberland/inventory/blob/master/Docs/d4.png)
+ ![Hito3_11](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/d6.png)
 
- - Instala las dependencias del sistema necesarias
+Asi quedaria el archivo [Dockerfile](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/Dockerfile.txt)
 
- ![Hito3_10](https://github.com/MigueTimberland/inventory/blob/master/Docs/d5.png)
-
- - Instala Composer globalmente
- 
- ![Hito3_11](https://github.com/MigueTimberland/inventory/blob/master/Docs/d6.png)
-
- - Definir una variable de entorno para la versión de Git
- 
- ![Hito3_12](https://github.com/MigueTimberland/inventory/blob/master/Docs/d7.png)
-
- - Actualiza e instala wget
- 
- ![Hito3_13](https://github.com/MigueTimberland/inventory/blob/master/Docs/d8.png)
-
-  - Copia solo el archivo composer.json desde la ruta local de Windows al contenedor
- 
- ![Hito3_14](https://github.com/MigueTimberland/inventory/blob/master/Docs/d9.png)
-
-  - Instala las dependencias usando Composer
- 
- ![Hito3_15](https://github.com/MigueTimberland/inventory/blob/master/Docs/d10.png)
-
-  - Establece el punto de entrada para el contenedor
- 
- ![Hito3_16](https://github.com/MigueTimberland/inventory/blob/master/Docs/d11.png)
-
-Asi quedaria el archivo [Dockerfile](https://github.com/MigueTimberland/inventory/blob/master/Docs/Dockerfile.txt)
-
- ![Hito3_17](https://github.com/MigueTimberland/inventory/blob/master/Docs/dokerescritorio.png)
+ ![Hito3_12](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/dokerefile.png)
 
 ### Archivo docker-compose.yml
 
