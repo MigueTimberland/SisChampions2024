@@ -26,8 +26,6 @@ Para el desarrollo del proyecto lo dividiremos en tres partes el frondend, backe
       
    ![Laragon](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/vuejs.png)
 
-   ![Laragon](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/Docs/vue.png)
-
 
  - Backend:
  
@@ -60,15 +58,15 @@ Para el desarrollo del proyecto lo dividiremos en tres partes el frondend, backe
  
   2.- Se tendra una interfaz de MySQL para ejecutar los querys.
  
-  ![Admin](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/AdminMySql.png)
+  ![Admin](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/phpadmin.png)
   
   3.- Una vez instalado las herramientas se podra clonar el repositorio creando una llave en de desarrollador:
   
-  ![Key](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/llave.png)
+  ![Key](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/llave2.png)
 
   4.- Se clonara el proyecto:
   
-  ![Key](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/clone.png)
+  ![Key](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/raiz2.png)
   
 
 ## Hitos del proyecto
@@ -76,6 +74,7 @@ Para el desarrollo del proyecto lo dividiremos en tres partes el frondend, backe
 Para para esta parte del documento vamos a describir cada uno de los hitos el proyecto:
 
 - [Hito 1: Definir el proyecto](https://github.com/MigueTimberland/SisChampions2024/milestone/1)
+(https://github.com/MigueTimberland/inventory/issues/1)
 
 - [Hito 2: Migrar la data de los activos fijos a MySql](https://github.com/MigueTimberland/SisChampions2024/milestone/2)
 
