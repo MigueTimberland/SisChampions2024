@@ -14,19 +14,19 @@ Para realizar el test siguiremos los siguientes pasos:
 
   - **Primero:** Se instala el framework PHPUnit en Visual Code
 
-    ![PHPUnit](https://github.com/MigueTimberland/inventory/blob/master/Docs/phpunit.png)
+    ![PHPUnit](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/phpunit.png)
 
   - **Segundo:** Buscamos el comando PHPUNnit Test 
 
-    ![PHPUnit Test](https://github.com/MigueTimberland/inventory/blob/master/Docs/phpunit_test.png)
+    ![PHPUnit Test](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/phpunit_test.png)
      
   - **Tercero:** Escogemos que le haremos test: funcion o la clase:
   
-     ![PHPUnit Test](https://github.com/MigueTimberland/inventory/blob/master/Docs/class.png)
+     ![PHPUnit Test](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/class.png)
 
   - **Cuarto:** Al dar click en toda la clase en este caso escogimos la clase TestCase.php
   
-     ![PHPUnit Test](https://github.com/MigueTimberland/inventory/blob/master/Docs/testcase.png)
+     ![PHPUnit Test](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/testcase.png)
 
 ### Pruebas de Test
 
@@ -36,25 +36,25 @@ Para realizar el test siguiremos los siguientes pasos:
 
     Por estas razones, y con el fin de no elevar considerablemente la complejidad del proyecto, se ha decidido optar por Jest como marco de pruebas. Este framework es instalado como dependencia de desarrollo mediante npm utilizando el comando:
      
-   ![Jest](https://github.com/MigueTimberland/inventory/blob/master/Docs/jest.png)
+   ![Jest](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/jest.png)
    
    - Se instalo composer
    
-   ![Composer](https://github.com/MigueTimberland/inventory/blob/master/Docs/composer.png)
+   ![Composer](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/composer.png)
 
    - Se creo un archivo de configuración para Jest, por ejemplo, jest.config.js en el directorio raíz del proyecto:
    
-   ![Config](https://github.com/MigueTimberland/inventory/blob/master/Docs/config.png)
+   ![Config](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/config.png)
    
-   ![ConfigJs](https://github.com/MigueTimberland/inventory/blob/master/Docs/configjs.png)
+   ![ConfigJs](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/configjs.png)
 
    - Se creo el archivo CreateProducto.spec.js para la prueba del componente CreateProducto.vue
 
-   ![CreateProducto](https://github.com/MigueTimberland/inventory/blob/master/Docs/createproducto.png)
+   ![CreateProducto](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/createproducto.png)
    
    - Finalmente se ejecuta el test
  
-   ![EjecucionTest](https://github.com/MigueTimberland/inventory/blob/master/Docs/testing.png)
+   ![EjecucionTest](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/testing.png)
 
 
 ## Librerias y Bibliotecas
