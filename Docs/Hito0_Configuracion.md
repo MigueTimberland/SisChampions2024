@@ -18,7 +18,7 @@
 
 Para crear un repositorio en GitHub, podemos ir a la sección de repositorios de nuestro perfil y hacer el click en el botón de "New". 
 
-![Boton New](https://github.com/MigueTimberland/inventory/blob/master/Docs/nuevo.png)
+![Boton New](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/nuevo.png)
 
 Se abrirá la página "Nuevo repositorio". Aquí deberás proporcionar la información básica para tu nuevo repositorio:
 
@@ -30,11 +30,11 @@ Se abrirá la página "Nuevo repositorio". Aquí deberás proporcionar la inform
 
 Inicializar este repositorio con: Puedes optar por inicializar tu repositorio con un archivo "README", un archivo "gitignore" y/o una licencia. Estos son opcionales y puedes añadirlos más tarde si lo prefieres.
 
-![Creando nuevo repositorio](https://github.com/MigueTimberland/inventory/blob/master/Docs/repositorio2024.png)
+![Creando nuevo repositorio](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/repositorio2024.png)
 
 Al crear el nuevo repositorio tendremos creado el primer archivo README.md
 
-![Nuevo repositorio](https://github.com/MigueTimberland/inventory/blob/master/Docs/repositoriosis.png)
+![Nuevo repositorio](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/repositoriosis.png)
 
 
 # Clonar Repositorio 
@@ -43,11 +43,11 @@ Para Clonar un repositorio de GitHub en un sistema Linux, puedes utilizar la lí
 
 1.- Abre una terminal en Visual Code. Puedes buscar "Terminal" en el menú de View.
 
-![Principal](https://github.com/MigueTimberland/inventory/blob/master/Docs/raiz.png)
+![Principal](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/raiz.png)
 
 2.- Luego, utiliza el comando git clone seguido de la URL del repositorio que deseas descargar. Puedes encontrar la URL en la página del repositorio en GitHub. 
 
-![Clonar](https://github.com/MigueTimberland/inventory/blob/master/Docs/raiz2.png)
+![Clonar](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/raiz2.png)
 
 3.- Git descargará el repositorio en tu sistema. Dependiendo del tamaño del repositorio y de tu conexión a Internet, este proceso puede llevar unos momentos.
 
