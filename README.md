@@ -5,7 +5,7 @@
 Sistema de Torneo de Fútbol 2024.
 ***
 
-![a](https://github.com/MigueTimberland/inventory/blob/master/Docs/PantallaInventario.png)
+![a](https://github.com/MigueTimberland/inventory/blob/master/Docs/pantallafutbol.png)
 
 ## :pencil: Descripción del Proyecto :pencil:
 
