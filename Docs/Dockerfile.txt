@@ -1,0 +1,42 @@
+# Utiliza la imagen oficial de PHP como base
+FROM php:7.4.33
+
+# Establece el directorio de trabajo en la imagen
+WORKDIR /var/www/html
+
+# Instala git
+RUN apt-get update && apt-get install -y git
+
+# Instala PHPUnit
+RUN curl -LO https://phar.phpunit.de/phpunit.phar && \
+    chmod +x phpunit.phar && \
+    mv phpunit.phar /usr/local/bin/phpunit
+
+# Instala las dependencias del sistema necesarias
+RUN apt-get update && apt-get install -y \
+    wget \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Instala Composer globalmente
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
+    && php composer-setup.php --install-dir=/usr/local/bin --filename=composer --quiet \
+    && rm composer-setup.php
+
+# Definir una variable de entorno para la versión de Git
+ARG GIT_VERSION=2.43.0-rc2.windows.1
+
+# Actualiza e instala wget
+#RUN apt-get update && apt-get install -y wget
+RUN wget https://github.com/git-for-windows/git/archive/refs/tags/v${GIT_VERSION}/Git-${GIT_VERSION}.tar.gz && \
+    tar -xf Git-${GIT_VERSION}.tar.gz -C /usr/local --strip-components=1 && \
+    rm Git-${GIT_VERSION}.tar.gz
+
+# Copia solo el archivo composer.json desde la ruta local de Windows al contenedor
+COPY composer.json ./
+
+# Instala las dependencias usando Composer
+RUN composer install
+
+# Establece el punto de entrada para el contenedor
+CMD ["php", "your-script.php"]

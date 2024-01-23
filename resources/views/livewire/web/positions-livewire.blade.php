@@ -4,7 +4,7 @@
         <div class="py-3 border-b border-gray-300 text-center">
             <label class="pr-3">Campeonato</label>
             <select class="form-select">
-                <option value="">Champions FIA</option>
+                <option value="">Champions URG</option>
             </select>
         </div>
         <table class="table-azul">

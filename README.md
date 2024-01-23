@@ -1,64 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# :soccer: SisChampions2024 :soccer:
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
+### Proyecto para la asignatura de Cloud Computing del Máster en Ingeniería Informática de la UGR.
+Sistema de Torneo de Fútbol 2024.
+***
 
-## About Laravel
+![a](https://github.com/MigueTimberland/inventory/blob/master/Docs/PantallaInventario.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## :pencil: Descripción del Proyecto :pencil:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Bienvenido a la aplicación oficial del torneo de fútbol universitario de la Universidad de Granada con nuestra innovadora aplicación web para el Torneo de Fútbol Universitario! Explora un entorno virtual interactivo que te sumerge en la competición colegial. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sigue cada partido en tiempo real, consulta la información detallada de los equipos, descubre estadísticas actualizadas y mantente al tanto de los resultados. 
 
-## Learning Laravel
+Nuestra aplicación web te ofrece una experiencia única, brindándote acceso fácil y rápido a toda la acción del torneo. ¡Prepárate para vivir la pasión del fútbol universitario de la Universidad de Granada como nunca antes, directamente desde tu navegador
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+***
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Hito 0: Descripción del problema a resolver usando correctamente git y GitHub
 
-## Laravel Sponsors
+ - [configuración y creación del repositorio en Github](https://github.com/MigueTimberland/inventory/blob/master/Docs/Hito0_Configuracion.md).
+ 
+ - [Descripción y Objetivos del proyecto](https://github.com/MigueTimberland/inventory/blob/master/Docs/Hito0_Explicacion.md).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Hito 1: Elaboración del Código, HUs e Hitos
 
-### Premium Partners
+La documentacion del [Hito 1](https://github.com/MigueTimberland/inventory/blob/master/Docs/Hito1.md), se definira el proyecto en el cual se va a trabajar, de la misma forma se explicara el lenguaje de programación, framework y arquitectura que se va a usar en el proyecto, creando historias de usuarios e hitos con el objetivo de descubrir. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Hito 2: Test
 
-## Contributing
+En el [Hito 2](https://github.com/MigueTimberland/inventory/blob/master/Docs/Hito2.md), se describira  la justificación de librerias y bibliotecas que se usen en el proyecto, 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Tambien se explicara la creación de los primeros test.
 
-## Code of Conduct
+## Hito 3: Creación de un contenedor para pruebas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+En el [Hito 3](https://github.com/MigueTimberland/inventory/blob/master/Docs/Hito3.md). Se llevará a cabo la generación de un contenedor destinado a pruebas, empleando una herramienta de contenerización como Docker. Esta tecnología posibilita encapsular una aplicación junto con todas sus dependencias en un contenedor, simplificando así la creación de entornos de prueba coherentes y reproducibles.
 
-## Security Vulnerabilities
+Elección de un contenedor base
+Configuración del contenedor
+Ejecución del contenedor
+Configuración Docker Hub
+Uso de registros alternativos y públicos de contenedores
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Hito 4: Integración continua
+Para el [Hito 4](https://github.com/MigueTimberland/inventory/blob/master/Docs/Hito4.md) se realizara la configuración de un sistema de integración continua.
