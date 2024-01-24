@@ -90,7 +90,7 @@ docker-compose up -d
 Obtenemos el siguiente resultado.
 
 ![docker_compose](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_compose.png)
-![docker_imagen](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_imagen_star.png)
+![docker_imagen](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_images_star.png)
 
 Podemos visualizar el contenedor en la aplicación Docker de Widnows.
 
@@ -124,11 +124,11 @@ docker push miguetimberland/sischampions2024-web:latest
 
 Al ejecutar obtenemos el siguiente resultado:
 
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_7.png)
+![docker_hub](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/dockerhub.png)
 
 Podemos ver tambien el resultado en nuestro perfil de Dockerhub:
 
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_6.png)
+![docker_hub_repositorio](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/dockerhub_repositorio.png)
 
 #### Uso de registros alternativos y públicos de contenedores
 ------------
