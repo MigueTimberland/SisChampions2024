@@ -83,8 +83,6 @@ Para para esta parte del documento vamos a describir cada uno de los hitos el pr
 
 - [Hito 5: Creación de Doker para pruebas](https://github.com/MigueTimberland/SisChampions2024/milestone/5)
 
-- [Hito 6: Cargar las opciones desarrolladas a un servidor](https://github.com/MigueTimberland/SisChampions2024/milestone/6)
- 
   
   
   

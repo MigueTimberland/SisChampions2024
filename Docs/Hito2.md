@@ -111,7 +111,7 @@ Ya que configurames Make al proyecto, configuraremos la tarea en el archivo Make
 
 Agregamos las pruebas funcionales y unitarias. Despues de corregir los errores iniciales (Fallar para corregir), obtenemos el siguiente resultado. Para ejecutar las pruebas ejecutar el comando `make test` en el terminal.
 
-![](https://raw.githubusercontent.com/SisChampions2024/blob/main/Docs/maketest.png)
+![Make Test](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/maketest.png)
 
   
   
