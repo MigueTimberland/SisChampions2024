@@ -4,7 +4,7 @@
 
 ### PHPUnit
   
-    PHPUnit es un framework de pruebas unitarias para el lenguaje de programación PHP. Fue desarrollado originalmente por Sebastian Bergmann y se ha convertido en la herramienta estándar para realizar pruebas unitarias en proyectos PHP. PHPUnit facilita la creación y ejecución de pruebas automatizadas para garantizar que el código funcione correctamente y cumpla con los requisitos esperados.
+    [PHPUnit](https://phpunit.de/)  es un framework de pruebas unitarias para el lenguaje de programación PHP. Fue desarrollado originalmente por Sebastian Bergmann y se ha convertido en la herramienta estándar para realizar pruebas unitarias en proyectos PHP. PHPUnit facilita la creación y ejecución de pruebas automatizadas para garantizar que el código funcione correctamente y cumpla con los requisitos esperados.
     
     PHPUnit es ampliamente utilizado en la comunidad de desarrollo de PHP y es una herramienta valiosa para garantizar la calidad del código al automatizar y facilitar el proceso de pruebas unitarias.
     
@@ -83,20 +83,36 @@ Para el desarrollo del proyecto usaremos la siguiente Librerias:
    
  Para tener la biblioteca PHPMailer descargada e incluida en el proyecto. Puede encontrar la biblioteca en [GitHub](https://github.com/PHPMailer/PHPMailer),
 
+#### Biblioteca de aserciones
+------------
 
-## Plantillas
+Al usar PHPUnit como framework, este ya incluye un conjunto de aserciones que podemos utilizar en la ejecucion de las pruebas, ya que contiene aserciones para difentes tipos de datos, comparaciones, excepciones, arrays, entre otros. Para mas informacion revisar el [link](https://docs.phpunit.de/en/10.0/assertions.html)
 
- - Smarty
- 
-   Smarty es un motor de plantillas para el lenguaje de programación PHP. Su función principal es separar la lógica de presentación (cómo se muestra la información al usuario) de la lógica de negocio (cómo se procesa y manipula la información en el lado del servidor).
+#### Gestor de paquetes
+------------
+Composer es el gestor de dependencias que ofrece Laravel, se podrian utilizar otras herramientas pero destaca por los siguientes motivos.
+- Composer es el gestor de dependencias mas popular en PHP, por lo tanto existe una gran cantidad de recursos y documentacion.
+- Esta integrado con Packgist que es el repositorio central de paquetes de PHP, en la que los desarrolladores comparten sus librerias.
+- Es compatible con Laravel, por lo que la integracion de dependencias sera mas sencilla.
+- Es facil de instalar, al menos para Windows.
+- El archivo composer.json es muy facil de entender y podemos configurar las versiones para facilitar la actualizacion y evitar conflictos. 
+- Esta inspirado en NPM, que es el gestor más popular. 
 
-   Permite la asignación y el uso de variables en las plantillas. Además, proporciona etiquetas (tags) para estructuras de control como bucles y condicionales, simplificando la manipulación de datos en las plantillas.
-  
-   Facilita la reutilización de fragmentos de código HTML al permitir la inclusión de sub-plantillas en otras plantillas principales.
+Para más detalles de composer, click [aquí](https://getcomposer.org/)
    
    
-  
-  
+#### ¿ Cómo realizar las pruebas?
+------------
+Ya que configurames Make al proyecto, configuraremos la tarea en el archivo Makefile
+
+`test: 
+	php artisan test
+`
+
+Agregamos las pruebas funcionales y unitarias. Despues de corregir los errores iniciales (Fallar para corregir), obtenemos el siguiente resultado. Para ejecutar las pruebas ejecutar el comando `make test` en el terminal.
+
+![](https://raw.githubusercontent.com/SisChampions2024/blob/main/Docs/maketest.png)
+
   
   
   
