@@ -128,7 +128,7 @@ Al ejecutar obtenemos el siguiente resultado:
 
 Podemos ver tambien el resultado en nuestro perfil de Dockerhub:
 
-![docker_hub_repositorio](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/dockerhub_repositorio.png)
+![docker_hub_repositorio](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/dockrhub_repositorio.png)
 
 #### Uso de registros alternativos y públicos de contenedores
 ------------
