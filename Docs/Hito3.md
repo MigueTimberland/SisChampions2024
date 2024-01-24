@@ -114,12 +114,12 @@ Obteniendo el siguiente resultado que incluyen las pruebas satisfactorias.
 Para subir el contenedor en el que se ejecutarón las pruebas unitarias, necesitamos etiquetarla con nuestro nombre de usuario e imagen. Para ello ejecutamos el siguiente comando:
 
 ```
-docker tag scambia-api-web:latest florescobar919/scambia-api-web:latest
+docker tag sischampions2024-web:latest miguetimberland/sischampions2024-api-web:latest
 ```
 
 Ahora subimos la imagen a docker hub con el siguiente comando:
 ```
-docker push florescobar919/scambia-api-web:latest
+docker push miguetimberland/sischampions2024-web:latest
 ```
 
 Al ejecutar obtenemos el siguiente resultado:

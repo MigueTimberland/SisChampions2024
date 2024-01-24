@@ -1,85 +1,83 @@
-# Hito 4: Integración continua
+# Hito 4
 
-## Sistema de Integración Continua
- 
-La elección del sistema de integración continua se baso en las necesidades específicas del proyecto y del desarrollo. Uno de los sistemas más populares y ampliamente utilizados es Jenkins.
+#### Integración Continua
+------------
 
-### Jenkins 
+Hemos optado por Github Actions para implementar integracion continua en el proyecto, el principal motivo es por la facilidad de configuración, más aún que nuestro repositorio esta alojado en GitHub. Además de tener muchos recursos en la web en caso de que surjan dudas. Revisamos herramientas como Jenkis, que es una de las más populares hoy en día, pero al buscar la documentación vimos que se tenían que realizar mas configuraciones, esto debido a las tecnologias que hemos elegido por lo tanto lo hemos descartado.
 
-- Jenkis facilita la integración continua al conectarse con tu sistema de control de versiones como Git y ejecutar automáticamente las pruebas después de cada confirmación.
+#### GitHub Actions
+------------
 
-- Ya que se trabaja con PHP y JavaScript Jenkins puede integrarse con herramientas como Composer para PHP y npm para JavaScript para gestionar las dependencias del proyecto. Esto garantiza que las bibliotecas y dependencias estén actualizadas y se construyan de manera coherente.
+Para llevar a cabo la automatización de las pruebas en la aplicación, hemos configurado el workflow Run PHPUnit Tests con la finalidad de que se ejecuten las pruebas cada vez que se cambios a la rama main. El archivo [test_actions.yml](https://github.com/florescobar/Scambia-PracticasCC-UGR/blob/main/.github/workflows/test_actions.yml) se ha definido de la siguiente manera
 
-- Jenkins puede automatizar el proceso de construcción del proyecto, lo que implica compilar el código fuente, gestionar dependencias y generar artefactos ejecutables
+```
+name: Run PHPUnit Tests
+on:
+  push:
+    branches: [ main ]
 
-- Jenkins es una herramienta versátil y potente que puede mejorar la eficiencia del desarrollo y la calidad del código como es el proyecto que involucran tecnologías como PHP, HTML, CSS y JavaScript.
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
-## Instación y Configuración de Jenkins
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-La instalación y configuración de Jenkins en Docker puede realizarse siguiendo los pasos a continuación:
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: 'mbstring, zip, intl'
 
-a. Descargar e iniciar el contenedor de Jenkins:
- 	docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
- 
-![Hito4_1](img/Hito4_1.png)
+      - name: Install dependencies
+        run: cd scambia-api && composer install --no-interaction
 
-Donde:
+      - name: Run PHPUnit Tests
+        run: cd scambia-api && make test
+```
 
-- -p 8080:8080 y -p 50000:50000 mapean los puertos 8080 y 50000 del contenedor a los mismos puertos en el host.
-- v jenkins_home:/var/jenkins_home monta un volumen para persistir los datos de Jenkins entre reinicios del contenedor.
-- jenkins/jenkins:lts especifica la imagen de Jenkins de la versión LTS.
+Se esta ejecutando las pruebas con el gestor de tareas make que vimos en los hitos anteriores.
 
+Una vez desplegado los cambios en la rama main. Vemos que automaticamente se ha ejecutado el action con las pruebas completadas.
 
-b. Acceder a Jenkins en el navegador
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_1.png).
 
-Abrimos el navegador web y revisamos  http://localhost:8080.
+De igual forma, en el hito anterior se ha configurado el workflow para el contenedor y se ha verificado que este se adapta a los cambios realizados.
 
-![Hito4_2](img/Hito4_2.png)
-
-Jenkins te pedirá la contraseña inicial, que puedes obtener ejecutando:
-
-![Hito4_3](img/Hito4_3.png)
-
-![Hito4_4](img/Hito4_4.png)
-
-c. Luego se instalaron los complementos sugeridos por Jenkins para las funcionalidades adicional.
-
-![Hito4_5](img/Hito4_5.png)
-
-De la mano con la creación de una cuenta.
-
-![Hito4_6](img/Hito4_6.png)
-
-![Hito4_7](img/Hito4_7.png)
-
-## Creación de fichero docker-compose.yaml
-
-Ingreamos el siguiente comando para abrir un archivo nuevo
-
-![Hito4_8](img/Hito4_8.png)
-
-Luego ingresar lo siguiente
-
-![Hito4_9](img/Hito4_9.png)
-
-Una vez tienes el fichero docker-compose.yaml creado tendremos que levantar el contenedor de jenkins para volver a configurar nuevamente el contenedor.
-
-## Creación del Proyecto en Jenkins
-
-Con Jenkins ejecutandose creamos un nuevo proyecto, y este es el resultado
-
-![Hito4_10](img/Hito4_10.png)
-
-
-Realizamos la configuración con el proyecto en github
-
-![Hito4_11](img/Hito4_11.png)
-
-Y con la siguiente imagen vemos que fue exitosa la configuración
-
-![Hito4_11](img/Hito4_12.png)
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_2.png).
 
 
 
+#### Circle CI
+------------
 
+Como sistema de integración adicional hemos elegido Circle CI. Como primer paso creamos la cuenta en [aquí](https://app.circleci.com/), seguido de ello se tuvo que crear el archivo [config.yml](https://github.com/florescobar/Scambia-PracticasCC-UGR/blob/main/.circleci/config.yml) ya que de esta forma la plataforma Circle CI lo reconoce. Configuramos el archivo de la siguiente manera:
 
+```
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: florescobar919/scambia-api-web:latest
+    steps:
+      - checkout
+      - run: cd scambia-api && composer install --no-interaction && make test
+
+workflows:
+  test_project:
+    jobs:
+      - test
+```
+
+Al subir los cambios vimos que Circle CI identifico el cambio y se inicio con la ejecución del pipelino, finalizando este con exito.
+
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_3.png).
+
+Al ver mas detalle del job podemos ver que las pruebas han sido ejecutas correctamente.
+
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_4.png).
