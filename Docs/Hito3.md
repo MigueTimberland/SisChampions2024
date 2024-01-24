@@ -73,7 +73,6 @@ RUN chown -R www-data:www-data /var/www/html && a2enmod rewrite
 
 ```
 
-```
 #### Creación del archivo docker-compose.yml
 ------------
 Definiremos el entorno de desarrollo de la aplicación web en el archivo docker-compose.yml En el cual definiremos:
@@ -107,3 +106,39 @@ Obteniendo el siguiente resultado que incluyen las pruebas satisfactorias.
 ![test_0](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/test0.png)
 
 ![docker_0](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/test1.png)
+
+
+#### Contenedor subido a Dockerhub
+------------
+
+Para subir el contenedor en el que se ejecutarón las pruebas unitarias, necesitamos etiquetarla con nuestro nombre de usuario e imagen. Para ello ejecutamos el siguiente comando:
+
+```
+docker tag scambia-api-web:latest florescobar919/scambia-api-web:latest
+```
+
+Ahora subimos la imagen a docker hub con el siguiente comando:
+```
+docker push florescobar919/scambia-api-web:latest
+```
+
+Al ejecutar obtenemos el siguiente resultado:
+
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_7.png)
+
+Podemos ver tambien el resultado en nuestro perfil de Dockerhub:
+
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_6.png)
+
+#### Uso de registros alternativos y públicos de contenedores
+------------
+
+Se ha configurado un workflow en el proyecto para que pueda ser ejecutado por actions de github para cada vez que se hace un cambio a la rama main. El workflow configurado se puede revisar [aquí](https://github.com/florescobar/Scambia-PracticasCC-UGR/blob/main/.github/workflows/github_actions.yml)
+
+
+Al ejecutarse las GitHub Actions se obtuvo el siguiente resultado:
+
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_8.png)
+
+Podemos ver tambien en la sección de paquetes de nuestro repositorio:
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_9.png)
