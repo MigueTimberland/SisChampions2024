@@ -73,86 +73,37 @@ RUN chown -R www-data:www-data /var/www/html && a2enmod rewrite
 
 ```
 
-Asi quedaria el archivo [Dockerfile](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/Dockerfile.txt)
+```
+#### Creación del archivo docker-compose.yml
+------------
+Definiremos el entorno de desarrollo de la aplicación web en el archivo docker-compose.yml En el cual definiremos:
+1. Servicio web basandonos en el archivo Dockerfile definido previamente.
+2. Servicio de base de datos con la imagen de MySQL.
+3. Servicio para conectarnos a la BD de datos con la imagen de phpMyAdmin.
 
- ![Hito3_12](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/dokerefile.png)
+#### Ejecución del contenedor de pruebas
+------------
 
-### Archivo docker-compose.yml
+Ya hemos configurado los archivos necesarios, ahora empezaremos a construir la imagen y ejecutar el contenedor para iniciar los servicios definidos en el archivo docker-compose.yml , con el comando:
+```
+docker-compose up -d 
+```
+Obtenemos el siguiente resultado.
 
-Luego pasaremos a la configuración de [docker-compose.yml](https://github.com/MigueTimberland/inventory/blob/master/Docs/docker-compose.yml)
+![docker_compose](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_compose.png)
+![docker_imagen](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_imagen_star.png)
 
-- El servicio php-apache utiliza la imagen oficial de PHP con Apache y expone el puerto 80.
+Podemos visualizar el contenedor en la aplicación Docker de Widnows.
 
-![Hito3_12](img/Hito3_12.png)
+![Hito3_4](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker_escritorio.png)
 
-- El servicio pgadmin utiliza la imagen oficial de Postgres, se ha configurado con un usuario y contraseña.
+Ahora ejecutaremos las pruebas unitarias y funcionales en el contenedor con el comando con el gestor de tareas que definimos en el anterior hito
 
-![Hito3_14](img/Hito3_14.png)
+```
+make test 
+```
+Obteniendo el siguiente resultado que incluyen las pruebas satisfactorias.
 
-- El servicio pgadmin utiliza la imagen oficial de pgAdmin4, se ha configurado con un usuario y contraseña.
+![test_0](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/test0.png)
 
-![Hito3_15](img/Hito3_15.png)
-
-## Ejecución del contenedor
-
-Para construir la imagen del contenedor se ejecuta el siguiente comando:
-
-![Hito3_21](img/Hito3_21.png)
-
-Dando el siguiente resultado:
-
-![Hito3_22](img/Hito3_22.png)
-
-Como siguienre paso inicializamos los servicios definidos en el archivo docker-compose.yml, con el siguiente comando:
-
-![Hito3_16](img/Hito3_16.png)
-
-![Hito3_19](img/Hito3_19.png)
-
-Primero comprobaremos la ejecución de postgres y psAdmin, así que en un navegador probaremos el localhost:8081, en el cual pondremos el usuario y contraseña que colocamos en el archivo docker-compose.yml, como a continuación se ven en las imagenes:
-
-![Hito3_17](img/Hito3_17.png)
-
-![Hito3_18](img/Hito3_18.png)
-
-Luego comprobaremos la ejecución de PHP
-
-![Hito3_20](img/Hito3_20.png)
-
-## Docker Hub
-
-Iniciamos creando una imagen del proyecto.
-
-![Hito3_23](img/Hito3_23.png)
-
-LUego subimos la imagen a docker hub con el siguiente comando:
-
-![Hito3_24](img/Hito3_24.png)
-
-De la misma forma podemos visualizar el resultado en el navegador
-
-![Hito3_25](img/Hito3_25.png)
-
-## Uso de registros alternativos y públicos de contenedores 
-
- - **Primero:** Creamos un archivo en el área de trabajo, el cual se encontrara en la ruta [.github/workflows/update-imagen.yml](github/workflows/update-imagen.yml)
-
- - **Segundo:** Una vez que se creo y configuro el archivo YAML, confirma y empuja los cambios a tu repositorio en GitHub.
-
- - **Tercero:** Luego revisar la sección "Actions" en el repositorio en GitHub para ver los resultados de la ejecución de las acciones programadas. 
-
-![Hito3_26](img/Hito3_26.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![docker_0](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/test1.png)
