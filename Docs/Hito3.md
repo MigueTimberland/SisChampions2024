@@ -138,7 +138,8 @@ Se ha configurado un workflow en el proyecto para que pueda ser ejecutado por ac
 
 Al ejecutarse las GitHub Actions se obtuvo el siguiente resultado:
 
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_8.png)
+![ajuste](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/ajuste_github.png)
 
-Podemos ver tambien en la sección de paquetes de nuestro repositorio:
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito3_9.png)
+Podemos ver tambien en la sección de etiqueta en DockerHub:
+
+![ajuste2](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/paquete.png)
