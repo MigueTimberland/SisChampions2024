@@ -3,10 +3,10 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: MigueTimberland/SisChampions2024-web:latest
+      - image: MigueTimberland/sischampions2024-web:latest
     steps:
       - checkout
-      - run: cd SisChampions2024 && composer install --no-interaction && make test
+      - run: cd sischampions2024 && composer install --no-interaction && make test
 
 workflows:
   test_project:
