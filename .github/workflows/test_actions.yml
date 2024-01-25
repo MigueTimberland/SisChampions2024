@@ -21,7 +21,7 @@ jobs:
           extensions: 'mbstring, zip, intl'
 
       - name: Install dependencies
-        run: cd scambia-api && composer install --no-interaction
+        run: cd SisChampions2024 && composer install --no-interaction
 
       - name: Run PHPUnit Tests
-        run: cd scambia-api && make test
+        run: cd SisChampions2024 && make test
