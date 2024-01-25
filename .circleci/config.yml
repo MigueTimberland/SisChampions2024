@@ -6,7 +6,7 @@ jobs:
       - image: miguetimberland/sischampions2024-web:latest
     steps:
       - checkout
-      - run: cd sischampions2024 && composer install --no-interaction && make test
+      - run: cd SisChampions2024 && composer install --no-interaction && make test
 
 workflows:
   test_project:
