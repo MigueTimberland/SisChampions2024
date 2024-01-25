@@ -34,22 +34,21 @@ jobs:
           extensions: 'mbstring, zip, intl'
 
       - name: Install dependencies
-        run: cd scambia-api && composer install --no-interaction
+        run: cd SisChampions2024 && composer install --no-interaction
 
       - name: Run PHPUnit Tests
-        run: cd scambia-api && make test
+        run: cd SisChampions2024 && make test
 ```
 
 Se esta ejecutando las pruebas con el gestor de tareas make que vimos en los hitos anteriores.
 
 Una vez desplegado los cambios en la rama main. Vemos que automaticamente se ha ejecutado el action con las pruebas completadas.
 
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_1.png).
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/hito4_1.png)
 
 De igual forma, en el hito anterior se ha configurado el workflow para el contenedor y se ha verificado que este se adapta a los cambios realizados.
 
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_2.png).
-
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/hito4_2.png)
 
 
 #### Circle CI
@@ -63,10 +62,10 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: florescobar919/scambia-api-web:latest
+      - image: florescobar919/SisChampions2024-web:latest
     steps:
       - checkout
-      - run: cd scambia-api && composer install --no-interaction && make test
+      - run: cd SisChampions2024 && composer install --no-interaction && make test
 
 workflows:
   test_project:

@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: florescobar919/SisChampions2024-web:latest
+    steps:
+      - checkout
+      - run: cd SisChampions2024 && composer install --no-interaction && make test
+
+workflows:
+  test_project:
+    jobs:
+      - test
