@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: MigueTimberland/sischampions2024-web:latest
+      - image: miguetimberland/sischampions2024-web:latest
     steps:
       - checkout
       - run: cd sischampions2024 && composer install --no-interaction && make test
