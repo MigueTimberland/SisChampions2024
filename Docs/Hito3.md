@@ -133,7 +133,7 @@ Podemos ver tambien el resultado en nuestro perfil de Dockerhub:
 #### Uso de registros alternativos y públicos de contenedores
 ------------
 
-Se ha configurado un workflow en el proyecto para que pueda ser ejecutado por actions de github para cada vez que se hace un cambio a la rama main. El workflow configurado se puede revisar [aquí](https://github.com/florescobar/Scambia-PracticasCC-UGR/blob/main/.github/workflows/github_actions.yml)
+Se ha configurado un workflow en el proyecto para que pueda ser ejecutado por actions de github para cada vez que se hace un cambio a la rama main. El workflow configurado se puede revisar [aquí](https://github.com/MigueTimberland/SisChampions2024/blob/main/.github/workflows/test_githubactions.yml)
 
 
 Al ejecutarse las GitHub Actions se obtuvo el siguiente resultado:

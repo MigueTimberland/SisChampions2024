@@ -8,7 +8,7 @@ Hemos optado por Github Actions para implementar integracion continua en el proy
 #### GitHub Actions
 ------------
 
-Para llevar a cabo la automatización de las pruebas en la aplicación, hemos configurado el workflow Run PHPUnit Tests con la finalidad de que se ejecuten las pruebas cada vez que se cambios a la rama main. El archivo [test_actions.yml](https://github.com/florescobar/Scambia-PracticasCC-UGR/blob/main/.github/workflows/test_actions.yml) se ha definido de la siguiente manera
+Para llevar a cabo la automatización de las pruebas en la aplicación, hemos configurado el workflow Run PHPUnit Tests con la finalidad de que se ejecuten las pruebas cada vez que se cambios a la rama main. El archivo [test_actions.yml](https://github.com/MigueTimberland/SisChampions2024/blob/main/.github/workflows/test_actions.yml) se ha definido de la siguiente manera
 
 ```
 name: Run PHPUnit Tests
@@ -54,7 +54,7 @@ De igual forma, en el hito anterior se ha configurado el workflow para el conten
 #### Circle CI
 ------------
 
-Como sistema de integración adicional hemos elegido Circle CI. Como primer paso creamos la cuenta en [aquí](https://app.circleci.com/), seguido de ello se tuvo que crear el archivo [config.yml](https://github.com/florescobar/Scambia-PracticasCC-UGR/blob/main/.circleci/config.yml) ya que de esta forma la plataforma Circle CI lo reconoce. Configuramos el archivo de la siguiente manera:
+Como sistema de integración adicional hemos elegido Circle CI. Como primer paso creamos la cuenta en [aquí](https://app.circleci.com/), seguido de ello se tuvo que crear el archivo [config.yml](https://github.com/MigueTimberland/SisChampions2024/blob/main/.circleci/config.yml) ya que de esta forma la plataforma Circle CI lo reconoce. Configuramos el archivo de la siguiente manera:
 
 ```
 version: 2.1
@@ -62,7 +62,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: florescobar919/SisChampions2024-web:latest
+      - image: miguetimberland/sischampions2024-web:latest
     steps:
       - checkout
       - run: cd SisChampions2024 && composer install --no-interaction && make test
@@ -75,9 +75,21 @@ workflows:
 
 Al subir los cambios vimos que Circle CI identifico el cambio y se inicio con la ejecución del pipelino, finalizando este con exito.
 
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_3.png).
+
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/circle.png)
+
+Creamos el Proyecto en CircleCI:
+
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/circle2.png)
+
+Creamos la llava publica y privada:
+
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/circle3.png)
+
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/circle5.png)
 
 Al ver mas detalle del job podemos ver que las pruebas han sido ejecutas correctamente.
 
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_4.png).
-![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_4.png).
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/circle_resultado1.png)
+
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/circle_resultado2.png)
