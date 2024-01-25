@@ -80,3 +80,4 @@ Al subir los cambios vimos que Circle CI identifico el cambio y se inicio con la
 Al ver mas detalle del job podemos ver que las pruebas han sido ejecutas correctamente.
 
 ![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_4.png).
+![](https://raw.githubusercontent.com/florescobar/Scambia-PracticasCC-UGR/main/docs/img/hito4_4.png).
