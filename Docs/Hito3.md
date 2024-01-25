@@ -138,7 +138,7 @@ Se ha configurado un workflow en el proyecto para que pueda ser ejecutado por ac
 
 Al ejecutarse las GitHub Actions se obtuvo el siguiente resultado:
 
-![ajuste](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/ajuste_github.png)
+![ajuste](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/actions.png)
 
 Podemos ver tambien en la sección de etiqueta en DockerHub:
 
