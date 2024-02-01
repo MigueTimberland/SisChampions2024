@@ -45,3 +45,6 @@ Uso de registros alternativos y públicos de contenedores
 
 ## Hito 4: Integración continua
 Para el [Hito 4](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/Hito4.md) se realizara la configuración de un sistema de integración continua.
+
+## Hito 5: Diseño y test de un microservicio. 
+Para el [Hito 5](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/Hito5.md) se Crear un microservicio sobre la base de la funcionalidad del hito anterior y cumpliendo los requisitos de las historias de usuario.
