@@ -29,7 +29,7 @@ php artisan make:model Currency
 Tal como hemos señalado en etapas previas, Eloquent actúa como el ORM (Mapeo Objeto-Relacional) incorporado en el framework Laravel. Esto posibilita la interacción con bases de datos, simplificando el acceso y proporcionando diversas funcionalidades predefinidas para llevar a cabo operaciones sobre dichas bases de datos.
 
 
-Para establecer las rutas, es necesario realizar su configuración en el archivo correspondiente. [routes/api.php](https://github.com/MigueTimberland/SisChampions2024/blob/main/scambia-api/routes/api.php). En este archivo, configuraremos todos los recursos de nuestro sitio, ya que estos representan todas las operaciones de nuestra API Restful.
+Para establecer las rutas, es necesario realizar su configuración en el archivo correspondiente. [routes/api.php](https://github.com/MigueTimberland/SisChampions2024/blob/main/routes/api.php). En este archivo, configuraremos todos los recursos de nuestro sitio, ya que estos representan todas las operaciones de nuestra API Restful.
 
 
 ```
@@ -61,7 +61,7 @@ Route::group(['middleware' => 'api','prefix' => 'auth'], function () {
 
 Para probar nuestras API's hemos utilizando Postman, realizando las peticiones correspondientes a los recursos HTTP creados.
 
-POST:
+#### POST:
 
 ![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/prueba_post_1.png)
 
@@ -72,7 +72,7 @@ POST:
 ![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/prueba_post_2.png)
 
 
-GET:
+#### GET:
 
 ![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/prueba_get_1.png)
 
@@ -86,7 +86,7 @@ GET:
 
 Laravel emplea Monolog para la generación de registros (logs), una biblioteca de registro flexible y potente ampliamente reconocida en la comunidad PHP. Cabe destacar que su configuración es bastante sencilla.
 
-En el archivo [config/logging.php](https://github.com/MigueTimberland/SisChampions2024/config/logging.php). En esta situación, se establecen los canales con la posibilidad de configurar el envío de registros a una dirección de correo electrónico o su almacenamiento en una base de datos. En este escenario particular, se ajustará la configuración para que los registros se almacenen de manera diaria en una carpeta específica.
+En el archivo [config/logging.php](https://github.com/MigueTimberland/SisChampions2024/blob/main/config/logging.php). En esta situación, se establecen los canales con la posibilidad de configurar el envío de registros a una dirección de correo electrónico o su almacenamiento en una base de datos. En este escenario particular, se ajustará la configuración para que los registros se almacenen de manera diaria en una carpeta específica.
 
 ![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/logging.png)
 
