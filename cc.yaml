@@ -1,0 +1,23 @@
+entidad:
+  scambia-api\app\Models\Account.php
+  scambia-api\app\Models\Currency.php
+  scambia-api\app\Models\CurrencyRate.php
+  scambia-api\app\Models\Notification.php
+  scambia-api\app\Models\Rol.php
+  scambia-api\app\Models\ApplicationSettings.php
+  scambia-api\app\Models\Transaction.php
+  scambia-api\app\Models\TypeNotification.php
+  scambia-api\app\Models\User.php
+  scambia-api\app\Models\UserNotification.php
+lenguaje: 
+  PHP
+test:   
+  scambia-api\tests\Feature\CurrencyRateTest.php
+  scambia-api\tests\Unit\CurrencyRateTest.php
+fichero_tareas:
+  scambia-api\Makefile
+rutas-api:
+  http://localhost:8070/api/currencyrate/calculate
+  http://localhost:8070/api/currencyrate/1
+  http://localhost:8070/api/currencyrate
+  http://localhost:8070/api/currencyrate/active/1

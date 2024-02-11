@@ -48,3 +48,6 @@ Para el [Hito 4](https://github.com/MigueTimberland/SisChampions2024/blob/main/D
 
 ## Hito 5: Diseño y test de un microservicio. 
 Para el [Hito 5](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/Hito5.md) se Crear un microservicio sobre la base de la funcionalidad del hito anterior y cumpliendo los requisitos de las historias de usuario.
+
+## Hito 6: Composición de Servicios. 
+Para el [Hito 6](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/Hito6.md) se realizara la Justificación de la estructura del clúster & Justificación de la configuración de cada uno de los contenedores que lo componen, Documentación del fichero de composición & testeo.
