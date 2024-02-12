@@ -1,14 +1,14 @@
 entidad:
+  SisChampions2024\app\Models\Transaction.php
+  SisChampions2024\app\Models\TypeNotification.php
+  SisChampions2024\app\Models\User.php
+  SisChampions2024\app\Models\UserNotification.php
   SisChampions2024\app\Models\Account.php
   SisChampions2024\app\Models\Currency.php
   SisChampions2024\app\Models\CurrencyRate.php
   SisChampions2024\app\Models\Notification.php
   SisChampions2024\app\Models\Rol.php
   SisChampions2024\app\Models\ApplicationSettings.php
-  SisChampions2024\app\Models\Transaction.php
-  SisChampions2024\app\Models\TypeNotification.php
-  SisChampions2024\app\Models\User.php
-  SisChampions2024\app\Models\UserNotification.php
 lenguaje: 
   PHP
 test:   
@@ -17,7 +17,7 @@ test:
 fichero_tareas:
   SisChampions2024\Makefile
 rutas-api:
-  http://localhost:8070/api/currencyrate/calculate
-  http://localhost:8070/api/currencyrate/1
   http://localhost:8070/api/currencyrate
   http://localhost:8070/api/currencyrate/active/1
+  http://localhost:8070/api/currencyrate/calculate
+  http://localhost:8070/api/currencyrate/1
