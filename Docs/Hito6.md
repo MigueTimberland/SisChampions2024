@@ -24,7 +24,7 @@ Dentro del contenedor, se estructurarán dos servicios:
 #### Fichero de composición
 ------------
 
-Se ha definido en el archivo [docker-compose.yml](https://github.com/MigueTimberland/SisChampions2024/blob/main/routes/docker-compose.yml) los servicios que componen el contenedor. La estructura es la siguiente.
+Se ha definido en el archivo [docker-compose.yml](https://github.com/MigueTimberland/SisChampions2024/blob/main/docker-compose.yml) los servicios que componen el contenedor. La estructura es la siguiente.
 
 ```
 services:
@@ -67,7 +67,7 @@ Para crear la imagen y verificar que el contenedor se ha iniciado correctamente 
 docker-compose up -d
 ```
 Obteniendo la siguiente imagen del contenedor en ejecución .
-![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker-servicio.png).
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/test1.png).
 
 
 #### Pruebas
@@ -75,10 +75,9 @@ Obteniendo la siguiente imagen del contenedor en ejecución .
 
 Ahora que el contenedor está funcionando, incorporamos los siguientes puntos finales para verificar la exactitud de las respuestas.
 
-![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker-servicio.png).
-![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker-servicio.png).
-![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker-servicio.png).
-![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/docker-servicio.png).
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/prueba_get_1.png).
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/prueba_post_1.png).
+![](https://github.com/MigueTimberland/SisChampions2024/blob/main/Docs/prueba_post_2.png).
 
 
-Incluimos la lista de los demás puntos finales en el archivo correspondiente [cc.yaml]( https://github.com/MigueTimberland/SisChampions2024/blob/main/routes/cc.yml)
+Incluimos la lista de los demás puntos finales en el archivo correspondiente [cc.yaml](https://github.com/MigueTimberland/SisChampions2024/blob/main/cc.yaml)

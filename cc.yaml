@@ -1,21 +1,21 @@
 entidad:
-  scambia-api\app\Models\Account.php
-  scambia-api\app\Models\Currency.php
-  scambia-api\app\Models\CurrencyRate.php
-  scambia-api\app\Models\Notification.php
-  scambia-api\app\Models\Rol.php
-  scambia-api\app\Models\ApplicationSettings.php
-  scambia-api\app\Models\Transaction.php
-  scambia-api\app\Models\TypeNotification.php
-  scambia-api\app\Models\User.php
-  scambia-api\app\Models\UserNotification.php
+  SisChampions2024\app\Models\Account.php
+  SisChampions2024\app\Models\Currency.php
+  SisChampions2024\app\Models\CurrencyRate.php
+  SisChampions2024\app\Models\Notification.php
+  SisChampions2024\app\Models\Rol.php
+  SisChampions2024\app\Models\ApplicationSettings.php
+  SisChampions2024\app\Models\Transaction.php
+  SisChampions2024\app\Models\TypeNotification.php
+  SisChampions2024\app\Models\User.php
+  SisChampions2024\app\Models\UserNotification.php
 lenguaje: 
   PHP
 test:   
-  scambia-api\tests\Feature\CurrencyRateTest.php
-  scambia-api\tests\Unit\CurrencyRateTest.php
+  SisChampions2024\tests\Feature\CurrencyRateTest.php
+  SisChampions2024\tests\Unit\CurrencyRateTest.php
 fichero_tareas:
-  scambia-api\Makefile
+  SisChampions2024\Makefile
 rutas-api:
   http://localhost:8070/api/currencyrate/calculate
   http://localhost:8070/api/currencyrate/1
